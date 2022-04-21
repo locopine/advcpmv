@@ -16,5 +16,12 @@ rm coreutils-$CORE_UTILS_VERSION.tar.xz
     make
     cp ./src/cp ../advcp
     cp ./src/mv ../advmv
+
+    sudo mv ./advcp /usr/local/bin/
+    sudo mv ./advmv /usr/local/bin/
+    echo alias cp '/usr/local/bin/advcp -g' >> ~/.bashrc
+    echo alias cp '/usr/local/bin/advcp -g' >> ~/.zshrc
+    echo alias mv '/usr/local/bin/advmv -g' >> ~/.bashrc
+    echo alias mv '/usr/local/bin/advmv -g' >> ~/.zshrc
 )
 rm -rf coreutils-$CORE_UTILS_VERSION
